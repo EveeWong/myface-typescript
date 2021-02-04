@@ -1,76 +1,72 @@
 <html lang="en-gb">
 <link rel="stylesheet" href="/css/app.css">
 
-<div id="head">
-    <div>
+<header class='head'>
+    <h1>MyFace</h1>
+<nav class='navbar'>
     <%- include('_head') -%>
-</div>
-    <div>
-        <%- include('_header') -%>
-    </div>
-</div>
+    <%- include('_header') -%> 
+</nav>
+</header>
 
-
-<body>
-    <h2>Post Feed</h2>
-
+<body class='content'>
     <% results.forEach(function(post) {%>
-        <div id='entire-post' class='responsive'>
-
-            <div id="NameAndDate">
+        <div class ='container'>
+        <div class='postHeader'>
                 <p>Posted by: <%= post.postedBy.name %>
                 </p>
 
-                <p>on: <%= post.createdAt %>
+                <p class='date'>On: <%= post.createdAt %>
                 </p>
             </div>
 
 
-            <div id='imageOnly' class='responsive'>
+            <div>
                 <img class='responsive' src='<%= post.imageUrl %>'>
             </div>
 
 
-            <div id='textOfPost'>
+            <div class='comment'>
                 <p>
                     <%= post.message %>
                 </p>
-            </div>
+            
 
-            <div id="like-and-dislike">
-                <div id="like" class='likeDislike'>
+                <div class='buttonContainer'>
+                <div class='LikeDislikeButton'>
                     <%= post.likedBy.length %>
                         <form method="post" action='/posts/<%=post.id%>/like/'>
                             <button class="button" type="submit">Like</button>
                         </form>
                 </div>
-                <div id='dislike' class='likeDislike'>
+                <div class='LikeDislikeButton'>
                     <%= post.dislikedBy.length %>
                         <form method="post" action='/posts/<%=post.id%>/dislike/'>
                             <button class="button" type="submit">Dislike</button>
                         </form>
                 </div>
+               </div>
+            </div>
             </div>
 
-        </div>
         <% }); %>
 
 
-            <button type="submit" id="Create post" class="createPost">
+            <button type="submit" class='postButton'>
                 <a href='/posts/create'>Create a Post</a>
             </button>
 </body>
 
 
 <footer>
-    <button type="submit" id="next" class='pageButton'>
+    <button type="submit" class='pageButton'>
         <%if (next) { %>
             <a href="<%= next %>">Next</a>
             <% } %>
     </button>
 
     <%if (previous) { %>
-    <button type="submit" id="previous" class='pageButton'>
+    <button type="submit" class='pageButton'>
             <a href="<%= previous %>">Previous</a>
         
     </button>

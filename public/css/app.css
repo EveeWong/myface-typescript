@@ -1,95 +1,120 @@
-@media only screen and (max-width: 600px){
 
 body {
-    background-color:#cccccc;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
-}
-#NameAndDate {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
-    background-color:#ffffff;
-    text-align: center; 
+    background-color: #f2f2f2;
+    color: #00264d
 }
 
-#textOfPost{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1em;
-    text-align: center;
-    background-color:#ffffff;
+.content {
+    max-width: 960px;
+    margin: auto;
 }
 
-#head {
-    background-color: #66ccff;
-    width: 100%;
-    border: 15px solid #66ccff;
-    padding: 30px;
-    margin: 0px;  
-}
-
-#usersLink {
-    margin-left: 35%;
-}
-
-
-.headerLinks{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.0em;
-    color: #e1e1ea;
-}
-
-
-h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-    color: #0088cc;
-}
-
-a {
+a{
     text-decoration: none;
+    color: #ffffff;
+    background-color: #b3d9ff;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: bold;
+    display: inline-block;
+    font-size: x-large;
 }
 
-#entire-post {
-    float:center;
-    margin:auto;
+a:hover {
+    cursor: pointer;
+  }
+
+header {
+    font-family: Courier New, monospace;
+    font-weight: 500;
+    color:#ffffff;
+    background-color: #b3d9ff;
     width: 100%;
-    height: auto;
-    border-top-style: solid;
-    border-top-color:#66ccff;
-    border-top-width: 10px;
+    text-align: center;
+    font-style: oblique;
+    padding: 1px;
+    border-radius: 0.5em;
 }
 
-#imageOnly {
+.navbar {
+    font-family: Courier New, monospace;
+    font-weight: 100;
+    color:#ffffff;
+    width: 100%;
+    margin-bottom: 15px, solid, #66b5ff;
+    
+}
+
+.container{
+    font-family: Verdana, sans-serif;
+    color: #001a33;
+}
+
+.postHeader{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    background-color: aliceblue;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-
+    width: 50%;
+    border-radius: 0.5em;
 }
-.responsive {
-    width: 100%;
-    height: auto;
-  }
 
-#like-and-dislike{
+.comment{
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 3px;
+}
+
+p{
+    margin-left: 3%;
+}
+
+.date{
+    margin-right: 2%;
+    color: hsl(209, 75%, 20%);
+}
+
+.buttonContainer{
+    background-color: white;
     display:flex;
-    flex-direction: row; 
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.button {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-  font-size: 0.6em;
-  font-weight: bold;
-  width: 65px;
-  padding: 0.80rem;
-  background: #66ccff;
-  color: #e1e1ea;
-  border-radius: 0.6em;
-  cursor: pointer;
+.likeDislikeButton{
+    text-align: center;
+    color: #339cff;
 }
 
-
+.button{
+    background-color: #339cff;
+    font-size: normal;
+    font-weight: 500;
+    color: white;
+    width: 125;
+    padding: 5%;
+    border-radius: 025em;
+    border-style: none;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+}
 
-
+.postButton  {
+position: fixed;
+right: 0;
+top: 50%;
+}
